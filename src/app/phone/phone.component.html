@@ -1,0 +1,24 @@
+<div class="main-container">
+    <div class="phone-case">
+        <div class="speaker">
+            <div class="audio"></div>
+            <div class="camera"></div>
+        </div>
+
+        <div class="phone-screen">
+            <app-login *ngIf="isOnLogin" (goToWelcome)="goToWelcome()" (goToDashboard)="goToDashboard()"></app-login>
+            <app-register *ngIf="isOnRegister" (goToWelcome)="goToWelcome()"></app-register>
+            <app-welcome *ngIf="isOnWelcome" (goToRegister)="goToRegister()" (goToLogin)="goToLogin()"></app-welcome>
+            <app-dashboard 
+                *ngIf="isOnDashboard"
+                (goToProfile)="goToProfile()"
+                ></app-dashboard>
+            <app-profile *ngIf="isOnProfile" (goToDashboard)="goToDashboard()" (goToWelcome)="goToWelcome()"></app-profile>
+
+            <div *ngIf="isClosed" class="phone-screen-locked"></div>
+        </div>
+
+
+        <div class="home-button" (click)="openPhone()"></div>
+    </div>
+</div>

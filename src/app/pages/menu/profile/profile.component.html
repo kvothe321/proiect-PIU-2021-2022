@@ -1,0 +1,61 @@
+<div class="profile">
+    <div class="alert alert-primary" role="alert">
+        <div class="profile-title">
+            <p>PROFIL</p>
+            <i class="fas fa-sign-out-alt" (click)="signOut()"></i>
+        </div>
+    </div>
+    
+    <div class="editable-text-container">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="Gigel" [disabled]="isEditingName">
+            <label for="floatingInput">Nume</label>
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="editName()">Modifică</button>
+    </div>
+
+    <div class="editable-text-container">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="Popescu" [disabled]="isEditingPrenume">
+            <label for="floatingInput">Prenume</label>
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="editPrenume()">Modifică</button>
+    </div>
+
+    <div class="editable-text-container">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="gigel.popescu@gmail.com" [disabled]="isEditingEmail">
+            <label for="floatingInput">Email</label>
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="editEmail()">Modifică</button>
+    </div>
+
+    <div *ngIf="!documentUploaded" class="alert alert-secondary" style="margin: 0; margin-top: 3rem;" role="alert">
+        Încărcare atestat
+    </div>
+
+    <div *ngIf="documentUploaded" class="alert alert-danger" style="margin: 0; margin-top: 3rem;" role="alert">
+        În aşteptarea validării ...
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="file" class="form-control" id="inputGroupFile02" (change)="handleFileInput()">
+    </div>
+
+
+    <button type="button" class="btn btn-success" (click)="saveChanges()">Salvează modificările</button>
+
+    <div *ngIf="savedSuccessfully" class="alert alert-success" role="alert">
+        Modificările au fost salvate cu success! <i class="far fa-check-circle"></i>
+    </div>
+
+
+    <!-- GO BACK BUTTON -->
+    <div class="go-back-button-menu">
+        <i class="fas fa-chevron-circle-left" (click)="showDashboard()"></i>
+    </div>
+</div>
+

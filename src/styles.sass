@@ -1,0 +1,67 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap'
+
+.form-container
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    flex-direction: column
+    padding: 3rem
+
+    button
+        margin-top: 3rem
+
+.go-back-button
+    position: absolute
+    top: 10px
+    left: 10px
+    width: 60px
+    height: 60px
+    background: transparent
+    font-size: 35px
+    color: rgba(0, 0, 255, 0.2)
+
+    i:hover
+        cursor: pointer
+        color: rgba(0, 0, 255, 0.4)
+
+    i:active
+        color: rgba(15, 17, 136, 0.9)
+
+.go-back-button-menu
+    position: absolute
+    bottom: 0px
+    left: 10px
+    width: 60px
+    height: 60px
+    background: transparent
+    font-size: 35px
+    color: rgba(0, 0, 255, 0.2)
+
+    i:hover
+        cursor: pointer
+        color: rgba(0, 0, 255, 0.4)
+
+    i:active
+        color: rgba(15, 17, 136, 0.9)
+
+.flex-container
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: fit-content
+    flex-wrap: wrap
+    padding: 1rem
+
+    .make-it-bigger
+        font-size: 18px
+        padding: 0.8rem
+        margin: 0.5rem
+        flex-basis: 70%
