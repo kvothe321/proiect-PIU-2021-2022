@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./phone.component.sass']
 })
 export class PhoneComponent implements OnInit {
-  public isClosed = true;
+  public isClosed = false;
   public isOnLogin = false;
   public isOnRegister = false;
-  public isOnWelcome = true;
+  public isOnWelcome = false;
   public isOnDashboard = false;
   public isOnProfile = false;
+  public isOnRaportareSesizare = false;
+  public isOnNotifications = true;
 
   constructor() { }
 
@@ -24,6 +26,8 @@ export class PhoneComponent implements OnInit {
     this.isOnRegister = false;
     this.isOnDashboard = false;
     this.isOnProfile = false;
+    this.isOnRaportareSesizare = false;
+    this.isOnNotifications = false;
   }
 
   public openPhone(): void{
@@ -53,6 +57,16 @@ export class PhoneComponent implements OnInit {
   public goToProfile(): void{
     this.hideAllPages();
     this.isOnProfile = true;
+  }
+
+  public goToRaportareSesizare(): void{
+    this.hideAllPages();
+    this.isOnRaportareSesizare = true;
+  }
+
+  public goToNotifications(): void{
+    this.hideAllPages();
+    this.isOnNotifications = true;
   }
 
 }

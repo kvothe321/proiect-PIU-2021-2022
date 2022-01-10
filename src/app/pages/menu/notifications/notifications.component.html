@@ -1,1 +1,48 @@
-<p>notifications works!</p>
+<div class="notifications-container">
+
+    <div class="notification" *ngFor="let notification of NOTIFICATIONS; let i = index">
+        <div class="notification-title">
+            <p>Sesizare {{ notification.id }}</p>
+        </div>
+        <div class="notification-body">
+            <p>Status: </p>
+            <span *ngIf="notification.statusId == 1" class="badge bg-danger" style="padding: 8px; margin: 1rem; font-size: 16px;">{{notification.status}}</span>
+            <span *ngIf="notification.statusId == 2" class="badge bg-warning text-dark" style="padding: 8px; margin: 1rem; font-size: 16px">{{notification.status}}</span>
+            <span *ngIf="notification.statusId == 3" class="badge bg-success" style="padding: 8px; margin: 1rem; font-size: 16px">{{notification.status}}</span>
+        </div>
+        <div class="notification-footer">
+            <button *ngIf="notification.statusId == 1" type="button" class="btn btn-primary" style="padding: 0.05rem 1rem; font-size: 13px" (click)="showNotificationDetails(notification.id, notification.details, notification.data_preluarii, i)">Preia</button>
+            <button *ngIf="notification.statusId == 2" type="button" class="btn btn-secondary" style="padding: 0.05rem 1rem; font-size: 13px" (click)="showNotificationDetails(notification.id, notification.details, notification.data_preluarii, i)">Vizualizează</button>
+            <button *ngIf="notification.statusId == 3" type="button" class="btn btn-secondary" style="padding: 0.05rem 1rem; font-size: 13px" [disabled]="true">Finalizat</button>
+        </div>
+    </div>
+
+    <div *ngIf="showNotificationFlag" class="notification-details">
+        <div class="notification-details-container">
+            <p>Sesizarea {{ notificationTitle }}</p>
+            <p>{{ notificationDetails }}</p>
+            <span *ngIf="notificationStatus == 3">
+                Data rezolvării: 
+                <p class="p-date">{{ notificationFinishedDate }}</p>
+            </span>
+            <span *ngIf="notificationStatus == 2">
+                Data preluării: 
+                <p class="p-date">{{ notificationFinishedDate }}</p>
+            </span>
+            <button *ngIf="notificationStatus == 1" type="button" class="btn btn-success" (click)="takeNotification()">Preia</button>
+        </div>
+
+        
+
+        <!-- GO BACK BUTTON -->
+        <div class="go-back-button-menu">
+            <i class="fas fa-chevron-circle-left" (click)="showNotifications()"></i>
+        </div>
+    </div>
+
+    <!-- GO BACK BUTTON -->
+    <div class="go-back-button-menu">
+        <i class="fas fa-chevron-circle-left" (click)="showDashboard()"></i>
+    </div>
+
+</div>

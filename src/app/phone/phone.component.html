@@ -12,8 +12,14 @@
             <app-dashboard 
                 *ngIf="isOnDashboard"
                 (goToProfile)="goToProfile()"
+                (goToRaportareSesizare)="goToRaportareSesizare()"
+                (goToNotifications)="goToNotifications()"
                 ></app-dashboard>
             <app-profile *ngIf="isOnProfile" (goToDashboard)="goToDashboard()" (goToWelcome)="goToWelcome()"></app-profile>
+
+            <app-report-issue *ngIf="isOnRaportareSesizare" (goToDashboard)="goToDashboard()"></app-report-issue>
+
+            <app-notifications *ngIf="isOnNotifications" (goToDashboard)="goToDashboard()"></app-notifications>
 
             <div *ngIf="isClosed" class="phone-screen-locked"></div>
         </div>

@@ -7,6 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   @Output("goToProfile") goToProfile = new EventEmitter();
+  @Output("goToRaportareSesizare") goToRaportareSesizare = new EventEmitter();
+  @Output("goToNotifications") goToNotifications = new EventEmitter();
 
   constructor() { }
 
@@ -15,5 +17,13 @@ export class DashboardComponent implements OnInit {
 
   public showProfile(): void{
     this.goToProfile.emit('');
+  }
+
+  public showRaportareSesizare(): void{
+    this.goToRaportareSesizare.emit('');
+  }
+
+  public showNotifications(): void{
+    this.goToNotifications.emit('');
   }
 }

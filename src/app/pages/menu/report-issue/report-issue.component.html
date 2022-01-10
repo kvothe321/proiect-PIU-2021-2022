@@ -1,1 +1,59 @@
-<p>report-issue works!</p>
+<div class="profile">
+    <div class="alert alert-primary" role="alert">
+            <p>RAPORTARE SESIZARE</p>
+    </div>
+    
+    <div class="editable-text-container">
+        <div class="form-floating mb-3" style="flex-basis: 100%;">
+            <input type="datetime-local" class="form-control" id="floatingInput">
+            <label for="floatingInput">Data şi ora</label>
+        </div>
+    </div>
+
+    <div class="editable-text-container">
+        <div class="form-floating mb-3" style="flex-basis: 100%;">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Adresa</label>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 100%;">
+          Tip sesizare
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="width: 100%; text-align: center;">
+          <li><a class="dropdown-item" href="#">Tip sesizare 1</a></li>
+          <li><a class="dropdown-item" href="#">Tip sesizare 2</a></li>
+          <li><a class="dropdown-item" href="#">Tip sesizare 3</a></li>
+        </ul>
+    </div>
+
+    <div class="editable-text-container">
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Descriere sesizare" id="floatingTextarea2" style="height: 100px; width: calc(400px - 3rem)"></textarea>
+            <label for="floatingTextarea2">Descriere sesizare</label>
+        </div>
+    </div>
+
+    <div *ngIf="!documentUploaded" class="alert alert-secondary" style="margin: 0; margin-top: 0rem;" role="alert">
+        Încarcă fotografie
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="file" class="form-control" id="inputGroupFile02" (change)="handleFileInput()">
+    </div>
+
+
+    <button type="button" class="btn btn-primary" (click)="saveChanges()">Trimite sesizare</button>
+
+    <div *ngIf="savedSuccessfully" class="alert alert-primary" role="alert">
+        Sesizarea a fost trimisa cu success! <i class="far fa-check-circle"></i>
+    </div> 
+
+
+    <!-- GO BACK BUTTON -->
+    <div class="go-back-button-menu">
+        <i class="fas fa-chevron-circle-left" (click)="showDashboard()"></i>
+    </div>
+</div>
+
