@@ -34,7 +34,7 @@
             <!-- !! TYPO: should be renamed to community* !! -->
             <app-comunity-projects  *ngIf="isOnCommunityProjects" (goToDashboard)="goToDashboard()"></app-comunity-projects>
 
-            <app-awards *ngIf="isOnAwards"></app-awards>
+            <app-awards *ngIf="isOnAwards" (goToDashboard)="goToDashboard()"></app-awards>
 
             <app-about *ngIf="isOnAbout" (goToDashboard)="goToDashboard()"></app-about>
 

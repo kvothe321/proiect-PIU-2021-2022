@@ -12,11 +12,11 @@ export class NotificationsComponent implements OnInit {
 
 
   public NOTIFICATIONS: any = [
-    {"id": 1, "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
-    {"id": 2, "status": "Preluat", "statusId": 2, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
-    {"id": 3, "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
-    {"id": 4, "status": "Finalizat", "statusId": 3, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
-    {"id": 5, "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
+    {"id": "Banca stricata", "status": "În aşteptare", "statusId": 1, "details": "Adresa: Cluj-Napoca, Parcul Central langa Chios\nSunt distruse 4 banci, oamenii nu au unde sa stea.", "data_preluarii": "2021-12-13 10:26"},
+    {"id": "Topogan ruginit", "status": "Preluat", "statusId": 2, "details": "Adresa: Cluj-Napoca, Manastur, Aleea Peana, parc\nCopiii nu pot utiliza topoganul datorita ruginii de pe el.", "data_preluarii": "2021-12-13 10:26"},
+    {"id": "Hinta rupta", "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
+    {"id": "Geam spart magazin", "status": "Finalizat", "statusId": 3, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
+    {"id": "Groapa asfalt", "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
   ]
 
   public showNotificationFlag: boolean = false;

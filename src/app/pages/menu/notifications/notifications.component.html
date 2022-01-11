@@ -2,7 +2,7 @@
 
     <div class="notification" *ngFor="let notification of NOTIFICATIONS; let i = index">
         <div class="notification-title">
-            <p>Sesizare {{ notification.id }}</p>
+            <p>{{ notification.id }}</p>
         </div>
         <div class="notification-body">
             <p>Status: </p>
@@ -19,7 +19,7 @@
 
     <div *ngIf="showNotificationFlag" class="notification-details">
         <div class="notification-details-container">
-            <p>Sesizarea {{ notificationTitle }}</p>
+            <p>{{ notificationTitle }}</p>
             <p>{{ notificationDetails }}</p>
             <span *ngIf="notificationStatus == 3">
                 Data rezolvării: 
