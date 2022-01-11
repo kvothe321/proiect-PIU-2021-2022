@@ -16,8 +16,8 @@ export class PhoneComponent implements OnInit {
   public isOnNotifications = false;
   public isOnReportsList = false;
   public isOnCommunityProjects = false;
-  public isOnAwards = false;
-  public isOnAbout = true;
+  public isOnAwards = true;
+  public isOnAbout = false;
 
   constructor() { }
 
