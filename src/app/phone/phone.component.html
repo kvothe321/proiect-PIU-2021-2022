@@ -7,19 +7,36 @@
 
         <div class="phone-screen">
             <app-login *ngIf="isOnLogin" (goToWelcome)="goToWelcome()" (goToDashboard)="goToDashboard()"></app-login>
+
             <app-register *ngIf="isOnRegister" (goToWelcome)="goToWelcome()"></app-register>
+
             <app-welcome *ngIf="isOnWelcome" (goToRegister)="goToRegister()" (goToLogin)="goToLogin()"></app-welcome>
+
             <app-dashboard 
                 *ngIf="isOnDashboard"
                 (goToProfile)="goToProfile()"
                 (goToRaportareSesizare)="goToRaportareSesizare()"
                 (goToNotifications)="goToNotifications()"
+                (goToReports)="goToReports()"
+                (goToCommunityProjects)="goToCommunityProjects()"
+                (goToAwards)="goToAwards()"
+                (goToAbout)="goToAbout()"
                 ></app-dashboard>
+
             <app-profile *ngIf="isOnProfile" (goToDashboard)="goToDashboard()" (goToWelcome)="goToWelcome()"></app-profile>
 
             <app-report-issue *ngIf="isOnRaportareSesizare" (goToDashboard)="goToDashboard()"></app-report-issue>
 
             <app-notifications *ngIf="isOnNotifications" (goToDashboard)="goToDashboard()"></app-notifications>
+
+            <app-reports-list *ngIf="isOnReportsList" (goToDashboard)="goToDashboard()"></app-reports-list>
+
+            <!-- !! TYPO: should be renamed to community* !! -->
+            <app-comunity-projects  *ngIf="isOnCommunityProjects" (goToDashboard)="goToDashboard()"></app-comunity-projects>
+
+            <app-awards *ngIf="isOnAwards"></app-awards>
+
+            <app-about *ngIf="isOnAbout" (goToDashboard)="goToDashboard()"></app-about>
 
             <div *ngIf="isClosed" class="phone-screen-locked"></div>
         </div>

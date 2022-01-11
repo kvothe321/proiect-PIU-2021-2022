@@ -12,11 +12,11 @@ export class NotificationsComponent implements OnInit {
 
 
   public NOTIFICATIONS: any = [
-    {"id": 1, "status": "În aşteptarea preluării", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
+    {"id": 1, "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
     {"id": 2, "status": "Preluat", "statusId": 2, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
-    {"id": 3, "status": "În aşteptarea preluării", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
+    {"id": 3, "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
     {"id": 4, "status": "Finalizat", "statusId": 3, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
-    {"id": 5, "status": "În aşteptarea preluării", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
+    {"id": 5, "status": "În aşteptare", "statusId": 1, "details": "Some details", "data_preluarii": "2021-12-13 10:26"},
   ]
 
   public showNotificationFlag: boolean = false;

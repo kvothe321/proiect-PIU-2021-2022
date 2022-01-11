@@ -13,7 +13,11 @@ export class PhoneComponent implements OnInit {
   public isOnDashboard = false;
   public isOnProfile = false;
   public isOnRaportareSesizare = false;
-  public isOnNotifications = true;
+  public isOnNotifications = false;
+  public isOnReportsList = false;
+  public isOnCommunityProjects = false;
+  public isOnAwards = false;
+  public isOnAbout = true;
 
   constructor() { }
 
@@ -28,6 +32,10 @@ export class PhoneComponent implements OnInit {
     this.isOnProfile = false;
     this.isOnRaportareSesizare = false;
     this.isOnNotifications = false;
+    this.isOnReportsList = false;
+    this.isOnCommunityProjects = false;
+    this.isOnAwards = false
+    this.isOnAbout = false;
   }
 
   public openPhone(): void{
@@ -67,6 +75,26 @@ export class PhoneComponent implements OnInit {
   public goToNotifications(): void{
     this.hideAllPages();
     this.isOnNotifications = true;
+  }
+
+  public goToReports(): void{
+    this.hideAllPages();
+    this.isOnReportsList = true;
+  }
+
+  public goToCommunityProjects(): void{
+    this.hideAllPages();
+    this.isOnCommunityProjects = true;
+  }
+
+  public goToAwards(): void{
+    this.hideAllPages();
+    this.isOnAwards = true;
+  }
+
+  public goToAbout(): void{
+    this.hideAllPages();
+    this.isOnAbout = true;
   }
 
 }

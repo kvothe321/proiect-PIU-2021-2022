@@ -18,29 +18,52 @@
                 <p>Raportare sesizare</p>
             </div>
         </button>
-        <button mat-raised-button color="primary" class="make-it-bigger">
+        <button mat-raised-button color="primary" class="make-it-bigger" (click)="showReports()">
             <div class="menu-button">
                 <i class="far fa-list-alt"></i>
                 <p>Listă sesizări</p>
             </div>
         </button>
-        <button mat-raised-button color="primary" class="make-it-bigger">
+        <button mat-raised-button color="primary" class="make-it-bigger" (click)="showCommunityProjects()">
             <div class="menu-button">
                 <i class="fas fa-users"></i>
                 <p>Proiecte comunitare</p>
             </div>
         </button>
-        <button mat-raised-button color="primary" class="make-it-bigger">
+        <button mat-raised-button color="primary" class="make-it-bigger" (click)="showAwards()">
             <div class="menu-button">
                 <i class="fas fa-medal" style="color: rgb(251, 255, 0);"></i>
                 <p>Premii</p>
             </div>
         </button>
-        <button mat-raised-button color="primary" class="make-it-bigger">
+        <button mat-raised-button color="primary" class="make-it-bigger" (click)="showAbout()">
             <div class="menu-button">
                 <i class="far fa-question-circle"></i>
                 <p>Despre aplicaţie</p>
             </div>
         </button>
+
+        <div class="alert alert-danger" style="margin-bottom: 0; margin-top: 1rem; width: 100%" role="alert">
+            Sesizări recente:
+          </div>
+
+        <div *ngFor="let report of REPORTS" class="report">
+            <div class="left-side">
+                <div class="up">
+                    <h4>{{ report.title }}</h4>
+                    <p>Data începerii:</p>
+                    <p style="color:rgb(141, 8, 72)">{{ report.start_date }}</p>
+                </div>
+                <div class="down">
+                    <p>Deschide descriere</p>
+                </div>
+            </div>
+            <span class="right-side">
+                <span>Status:</span>
+                <span  *ngIf="report.statusId == 1" class="badge bg-warning text-dark" style="margin-left: 0.5rem">În aşteptare</span>
+                <span  *ngIf="report.statusId == 2" class="badge bg-primary" style="margin-left: 0.5rem">Preluată</span>
+                <span  *ngIf="report.statusId == 3" class="badge bg-success" style="margin-left: 0.5rem">Finalizată</span>
+            </span>
+        </div>
     </div>
 </div>

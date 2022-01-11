@@ -99,3 +99,66 @@
 
     i:hover
         cursor: pointer
+
+.reports-list-container
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    padding: 1rem
+    overflow-y: auto
+
+    .my-reports
+        width: 100%
+        height: 100%
+
+    .reports
+        width: 100%
+        height: 100%
+
+
+.report
+    display: flex
+    width: 100%
+    background: rgba(231, 217, 192, 0.5)
+    padding: 0.5rem
+    border-radius: 8px
+    box-shadow: 0 1px 2px gray
+    margin-top: 1rem
+
+    .left-side
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        padding: 4px
+
+        .up
+            display: flex
+            flex-direction: column
+            justify-content: center
+            border-bottom: 1px solid black
+            border-right: 1px solid black
+
+        .down
+            border-right: 1px solid black
+            display: flex
+            align-items: center
+
+    .right-side
+        display: flex
+        flex-grow: 1
+        align-items: center
+        padding: 4px
+
+.report:hover
+    transform: scale(1.01)
+
+.buttons-menu
+    width: 100%
+    height: fit-content
+    display: flex
+    justify-content: center
+    align-items: center
+
+h4
+    font-weight: 900

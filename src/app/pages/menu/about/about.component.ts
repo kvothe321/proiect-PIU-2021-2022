@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.sass']
 })
 export class AboutComponent implements OnInit {
+  @Output("goToDashboard") goToDashboard = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public showDashboard(): void{
+    this.goToDashboard.emit('');
   }
 
 }

@@ -1,1 +1,60 @@
-<p>reports-list works!</p>
+<div class="reports-list-container">
+    
+    <div class="buttons-menu">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="flex-grow: 1;">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked (change)="handleChange()">
+            <label class="btn btn-outline-primary" for="btnradio1">Raportările mele</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" (change)="handleChange()">
+            <label class="btn btn-outline-primary" for="btnradio2" >Rezolvările mele</label>
+        </div>
+    </div>
+
+    <div *ngIf="isOnMyReports" class="my-reports">
+        <div *ngFor="let report of MYREPORTS" class="report">
+            <div class="left-side">
+                <div class="up">
+                    <h4>{{ report.title }}</h4>
+                    <p>Data începerii:</p>
+                    <p style="color:rgb(141, 8, 72)">{{ report.start_date }}</p>
+                </div>
+                <div class="down">
+                    <p>Deschide descriere</p>
+                </div>
+            </div>
+            <span class="right-side">
+                <span>Status:</span>
+                <span  *ngIf="report.statusId == 1" class="badge bg-warning text-dark" style="margin-left: 0.5rem">În aşteptare</span>
+                <span  *ngIf="report.statusId == 2" class="badge bg-primary" style="margin-left: 0.5rem">Preluată</span>
+                <span  *ngIf="report.statusId == 3" class="badge bg-success" style="margin-left: 0.5rem">Finalizată</span>
+            </span>
+        </div>
+    </div>
+
+    <div *ngIf="isOnReports" class="reports">
+        <div *ngFor="let report of REPORTS" class="report">
+            <div class="left-side">
+                <div class="up">
+                    <h4>{{ report.title }}</h4>
+                    <p>Data începerii:</p>
+                    <p style="color:rgb(141, 8, 72)">{{ report.start_date }}</p>
+                </div>
+                <div class="down">
+                    <p>Deschide descriere</p>
+                </div>
+            </div>
+            <span class="right-side">
+                <span>Status:</span>
+                <span  *ngIf="report.statusId == 1" class="badge bg-warning text-dark" style="margin-left: 0.5rem">În aşteptare</span>
+                <span  *ngIf="report.statusId == 2" class="badge bg-primary" style="margin-left: 0.5rem">Preluată</span>
+                <span  *ngIf="report.statusId == 3" class="badge bg-success" style="margin-left: 0.5rem">Finalizată</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- GO BACK BUTTON -->
+    <div class="go-back-button-menu">
+        <i class="fas fa-chevron-circle-left" (click)="showDashboard()"></i>
+    </div>
+
+</div>

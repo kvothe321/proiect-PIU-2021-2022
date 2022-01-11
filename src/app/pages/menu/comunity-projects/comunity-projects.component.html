@@ -1,1 +1,24 @@
-<p>comunity-projects works!</p>
+<div class="projects-container">
+    <div class="projects">
+        <div class="alert alert-primary" style="text-align: center;" role="alert">
+            Proiecte în demers
+        </div>
+
+        <div *ngFor="let project of PROJECTS; let i = index" class="card">
+            <p>some project details</p>
+            <p>some project details</p>
+            <p>some project details</p>
+            <p>some project details</p>
+            <div class="like-button">
+                <i  *ngIf="!project.is_liked" class="fas fa-heart" (click)="doLike(i)"></i>
+                <i *ngIf="project.is_liked" class="fas fa-heart clicked" (click)="doLike(i)"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- GO BACK BUTTON -->
+    <div class="go-back-button-menu">
+        <i class="fas fa-chevron-circle-left" (click)="showDashboard()"></i>
+    </div>
+</div>
