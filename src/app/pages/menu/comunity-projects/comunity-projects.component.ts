@@ -9,12 +9,9 @@ export class ComunityProjectsComponent implements OnInit {
   @Output("goToDashboard") goToDashboard = new EventEmitter();
 
   public PROJECTS: any = [
-    {"id": 1, "title": "Titlu 1", "description": "descriere", "is_liked": false},
-    {"id": 2, "title": "Titlu 2", "description": "descriere", "is_liked": false},
-    {"id": 3, "title": "Titlu 3", "description": "descriere", "is_liked": false},
-    {"id": 4, "title": "Titlu 4", "description": "descriere", "is_liked": false},
-    {"id": 5, "title": "Titlu 5", "description": "descriere", "is_liked": false},
-    {"id": 6, "title": "Titlu 6", "description": "descriere", "is_liked": false},
+    {"id": 1, "title": "Crearea de spatii verzi", "description": "Se vor planta 36.000 copaci pana in anul 2026 ", "is_liked": false},
+    {"id": 2, "title": "Vinerea verde", "description": "Vinerea vei avea gratuitate la calatoriile cu autobuzul", "is_liked": false},
+    {"id": 3, "title": "ColorRun", "description": "Participantii vor  alerga pentru o cauza, fiecare participant poate strange puncte pentru cauza sa", "is_liked": false},
   ]
 
   public likeTest: boolean = true;

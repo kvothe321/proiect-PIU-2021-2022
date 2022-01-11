@@ -5,10 +5,8 @@
         </div>
 
         <div *ngFor="let project of PROJECTS; let i = index" class="card">
-            <p>some project details</p>
-            <p>some project details</p>
-            <p>some project details</p>
-            <p>some project details</p>
+            <p style="font-size: 16px; font-weight: 500">{{ project.title }}</p>
+            <p>{{ project.description }}</p>
             <div class="like-button">
                 <i  *ngIf="!project.is_liked" class="fas fa-heart" (click)="doLike(i)"></i>
                 <i *ngIf="project.is_liked" class="fas fa-heart clicked" (click)="doLike(i)"></i>
