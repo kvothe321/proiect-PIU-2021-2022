@@ -9,6 +9,8 @@ export class RegisterComponent implements OnInit {
   @Output("goToWelcome") goToWelcome = new EventEmitter();
   @Output("goToDashboard") goToDashboard = new EventEmitter();
 
+  public registeredSuccessfully: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,5 +22,9 @@ export class RegisterComponent implements OnInit {
 
   public showDashboard(): void{
     this.goToDashboard.emit('');
+  }
+
+  public registerUser(): void{
+    this.registeredSuccessfully = true;
   }
 }

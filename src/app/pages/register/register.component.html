@@ -18,7 +18,10 @@
         <label for="parolaRegister">Parola</label>
     </div>
 
-    <button type="button" class="btn btn-primary">Register</button>
+    <button type="button" class="btn btn-primary" (click)="registerUser()">Register</button>
+    <div *ngIf="registeredSuccessfully" class="alert alert-primary" role="alert">
+        Cont creat cu success! <i class="far fa-check-circle"></i>
+    </div> 
 
     <div class="go-back-button">
         <i class="fas fa-chevron-circle-left" (click)="goBack()"></i>

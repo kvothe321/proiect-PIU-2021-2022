@@ -6,17 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./phone.component.sass']
 })
 export class PhoneComponent implements OnInit {
-  public isClosed = false;
+  public isClosed = true;
   public isOnLogin = false;
   public isOnRegister = false;
-  public isOnWelcome = false;
+  public isOnWelcome = true;
   public isOnDashboard = false;
   public isOnProfile = false;
   public isOnRaportareSesizare = false;
   public isOnNotifications = false;
   public isOnReportsList = false;
   public isOnCommunityProjects = false;
-  public isOnAwards = true;
+  public isOnAwards = false;
   public isOnAbout = false;
 
   constructor() { }
